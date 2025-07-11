@@ -1,0 +1,16 @@
+.header {
+  background-color: var(--color-gray-light);
+  padding-block: 36px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header__img {
+  width: 260px;
+  height: auto;
+}
+
+.header__nav__list {
+  display: flex;
+  gap: 2rem;
+}

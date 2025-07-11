@@ -1,11 +1,46 @@
 :root {
-  --color-light-gray: '#ebebeb';
-  --color-medium-gray: '#e3e3e3';
-  --color-dark-gray: '#252525';
-  --color-white: '#FFFFFF',
-  --color-black: '#000000' 
+  --color-gray-light: #ebebeb;
+  --color-gray-medium: #e3e3e3;
+  --color-gray-dark: #252525;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
+/* Gotham HTF - Black */
+@font-face {
+  font-family: "GothamHTF";
+  src: url("./assets/fonts/gotham-htf-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Gotham HTF - Bold */
+@font-face {
+  font-family: "GothamHTF";
+  src: url("./assets/fonts/gotham-htf-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Gotham HTF - Medium */
+@font-face {
+  font-family: "GothamHTF";
+  src: url("./assets/fonts/gotham-htf-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Global classes */
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.flexsp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -116,6 +151,8 @@ section {
   display: block;
 }
 body {
+  font-family: "GothamHTF", sans-serif;
+  font-weight: 500;
   line-height: 1;
 }
 ol,
@@ -136,4 +173,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

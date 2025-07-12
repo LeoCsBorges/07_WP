@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Banners from "../components/Banners";
+import Footer from "../components/Footer/Footer";
 
 export const HomePage = () => {
   return (
@@ -14,7 +15,7 @@ export const HomePage = () => {
         <Motion />
         <Clientes /> */}
       </main>
-      <p>fazer o footer component aqui</p>
+      <Footer />
     </>
   );
 };

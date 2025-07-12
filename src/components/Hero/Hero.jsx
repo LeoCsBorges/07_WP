@@ -34,7 +34,7 @@ export const Hero = () => {
                 Para nós da WP, é extremamente importante estarmos em sintonia
                 com as necessidades de cada cliente. Nossa intenção é
                 transformar cada trabalho em uma experiência, mostrando o nosso
-                dinamisto, excelência na entrega, entregando soluções e
+                dinamismo, excelência na entrega, entregando soluções e
                 cumprindo os prazos de acordo com as demandas solicitadas.
                 Caminhando juntos, podemos entregar e realizar grandes ideias.
               </p>

@@ -20,8 +20,8 @@ export const Banners = () => {
             {/* banners 300x250 */}
             <iframe
               src="https://verpecas.com.br/p/sebrae/22-02/completo/v2/banners/5-Ana-300x250-300kB-15%20seg-ate%203/"
-              width="300"
-              height="250"
+              width={300}
+              height={250}
               sandbox="allow-same-origin allow-scripts"
               title="Banner SEBRAE"
             />

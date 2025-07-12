@@ -1,0 +1,27 @@
+.footerContainer {
+  padding-block: 160px;
+  padding-inline: 80px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+}
+
+.subfooter {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  padding: 1rem;
+  color: #575757;
+  background-color: var(--color-gray-dark);
+}

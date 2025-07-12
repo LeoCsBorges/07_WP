@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import FooterLogo from "../FooterLogo/FooterLogo";
 
 export const Footer = () => {
   return (
@@ -6,12 +7,7 @@ export const Footer = () => {
       <div className="container">
         <div className={styles.footerContainer}>
           {/* logo animada */}
-          <iframe
-            src="https://digitalwp.com.br/banners/logo/"
-            frameborder="0"
-            width={300}
-            height={250}
-          ></iframe>
+          <FooterLogo />
 
           {/* endereço */}
           <div>

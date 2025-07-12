@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 6rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.wrapper__banners {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 160px;
+  row-gap: 100px;
+}

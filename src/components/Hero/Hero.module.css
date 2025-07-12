@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 }
 
-.subtitle {
+.title {
   font-size: 4rem;
   font-weight: 900;
   line-height: 4.25rem;
@@ -19,7 +19,7 @@
 .card {
   width: 50%;
   min-height: 572px;
-  padding: 98px;
+  padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;

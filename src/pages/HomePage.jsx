@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Banners from "../components/Banners";
 
 export const HomePage = () => {
   return (
@@ -7,7 +8,8 @@ export const HomePage = () => {
       <Header />
       <main>
         <Hero />
-        {/* <Banners />
+        <Banners />
+        {/* 
         <Web />
         <Motion />
         <Clientes /> */}

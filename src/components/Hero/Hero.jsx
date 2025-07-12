@@ -18,7 +18,7 @@ export const Hero = () => {
           {/* card top right */}
           <div className={`${styles.card} ${styles.card02}`}>
             <div>
-              <h2 className={styles.subtitle}>Quem somos</h2>
+              <h2 className={styles.title}>Quem somos</h2>
               <p className={styles.description}>
                 A WP é uma produtora digital ágil, criativa e inovadora.
                 Nascementos para melhorar a interatividade no mundo digital
@@ -29,7 +29,7 @@ export const Hero = () => {
           {/* card bottom left */}
           <div className={`${styles.card} ${styles.card03}`}>
             <div>
-              <h2 className={styles.subtitle}>Serviços</h2>
+              <h2 className={styles.title}>Serviços</h2>
               <p className={styles.description}>
                 Para nós da WP, é extremamente importante estarmos em sintonia
                 com as necessidades de cada cliente. Nossa intenção é

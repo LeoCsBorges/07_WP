@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Banners from "../components/Banners";
+import Motion from "../components/Motion";
 import Clients from "../components/Clients";
 import Footer from "../components/Footer";
 
@@ -12,8 +13,8 @@ export const HomePage = () => {
         <Hero />
         <Banners />
         {/* 
-        <Web />
-        <Motion />*/}
+        <Web />*/}
+        <Motion />
         <Clients />
       </main>
       <Footer />

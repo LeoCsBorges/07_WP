@@ -1,0 +1,28 @@
+.wrapper {
+  padding-top: 6rem;
+  text-align: center;
+  background-color: var(--color-gray-medium);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 5rem;
+  margin-bottom: 5rem;
+}
+
+.videosWrapper {
+  /* border: 2px solid blue; */
+}
+
+.videosWrapper iframe {
+  width: 50%;
+  aspect-ratio: 16 / 9;
+  filter: saturate(0);
+  transition: filter 0.5s ease;
+}
+
+.videosWrapper iframe:hover {
+  filter: saturate(1);
+}

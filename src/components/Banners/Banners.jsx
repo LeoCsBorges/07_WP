@@ -6,8 +6,8 @@ export const Banners = () => {
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>
-            BANNERS HTML5 <br />
-            RICH MEDIA
+            Banners HTML5 <br />
+            Rich Media
           </h2>
           <p className={styles.description}>
             Os criativos HTML5 são anúncios desenvolvidos com Javascript, HTML5

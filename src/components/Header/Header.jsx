@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <div className="container">
-        <div className="flexsp">
+        <div className={styles.wrapper}>
           <Link to="/">
             <img
               className={styles.header__img}

@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4.25rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.card {
+  width: 50%;
+  min-height: 572px;
+  padding: 98px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card01 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+.card02 {
+  color: var(--color-white);
+  background: url("../../assets/images/bg-programador.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.card03 {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.card04 {
+  padding: 0;
+  color: var(--color-white);
+  background-color: #474747;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.card04__options {
+  width: 50%;
+  height: 100%;
+  padding: 98px;
+  display: flex;
+  align-items: center;
+}
+
+.card04__options__list {
+  list-style: disc;
+  line-height: 2rem;
+}
+
+.card04__portifolio {
+  width: 50%;
+  height: 100%;
+}
+
+.card04__portifolio {
+  background: url("../../assets/images/bg-programador02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__link {
+  font-weight: 500;
+  padding: 30px 50px;
+  border: 2px solid white;
+}

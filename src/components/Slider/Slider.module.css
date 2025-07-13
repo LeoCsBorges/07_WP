@@ -31,7 +31,6 @@
 }
 
 .slideImg {
-  min-height: 655px;
   flex-grow: 1;
   display: flex;
   overflow: hidden;

@@ -17,9 +17,15 @@
   background-color: var(--color-white);
 }
 
+.sliderContent {
+  max-width: 1250px;
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 .slide {
   width: 100%;
-  max-width: 1250px;
   display: flex;
   flex-direction: column;
 }

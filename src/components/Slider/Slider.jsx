@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Slider.module.css";
 
@@ -48,6 +48,7 @@ const slides = [
 
 export const Slider = () => {
   const [[slideIndex, direction], setSlideState] = useState([0, 0]);
+  const { img, alt, link, description } = slides[slideIndex];
 
   const paginate = (newDirection) => {
     setSlideState(([prevIndex]) => {
@@ -56,8 +57,6 @@ export const Slider = () => {
       return [newIndex, newDirection];
     });
   };
-
-  const { img, alt, link, description } = slides[slideIndex];
 
   const variants = {
     enter: (dir) => ({
@@ -73,6 +72,14 @@ export const Slider = () => {
       opacity: 0,
     }),
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      paginate(1);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slideIndex]);
 
   return (
     <div className={styles.sliderWrapper}>

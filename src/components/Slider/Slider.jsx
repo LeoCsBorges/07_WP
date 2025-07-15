@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Slider.module.css";
 
@@ -48,7 +48,22 @@ const slides = [
 
 export const Slider = () => {
   const [[slideIndex, direction], setSlideState] = useState([0, 0]);
+  const [autoplay, setAutoplay] = useState(true);
+  const intervalRef = useRef();
   const { img, alt, link, description } = slides[slideIndex];
+
+  const variants = {
+    enter: (dir) => ({ x: dir > 0 ? 150 : -150, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir) => ({ x: dir > 0 ? -150 : 150, opacity: 0 }),
+  };
+
+  useEffect(() => {
+    if (autoplay) {
+      intervalRef.current = setInterval(() => paginate(1), 5000);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [autoplay]);
 
   const paginate = (newDirection) => {
     setSlideState(([prevIndex]) => {
@@ -58,39 +73,23 @@ export const Slider = () => {
     });
   };
 
-  const variants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 150 : -150,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir) => ({
-      x: dir > 0 ? -150 : 150,
-      opacity: 0,
-    }),
+  const handleManualPaginate = (dir) => {
+    clearInterval(intervalRef.current);
+    setAutoplay(false);
+    paginate(dir);
+    setTimeout(() => setAutoplay(true), 8000);
   };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      paginate(1);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slideIndex]);
 
   return (
     <div className={styles.sliderWrapper}>
-      <div className={styles.prev} onClick={() => paginate(-1)}>
+      <div className={styles.prev} onClick={() => handleManualPaginate(-1)}>
         {"<"}
       </div>
 
       <div className={styles.sliderContent}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
-            key={slideIndex}
+            key={`${slideIndex}-${direction}`}
             className={styles.slide}
             custom={direction}
             variants={variants}
@@ -112,15 +111,15 @@ export const Slider = () => {
               </a>
             </div>
             <div className={styles.slideDescription}>
-              {description.map((text, index) => (
-                <p key={index}>{text}</p>
+              {description.map((text, idx) => (
+                <p key={idx}>{text}</p>
               ))}
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      <div className={styles.next} onClick={() => paginate(1)}>
+      <div className={styles.next} onClick={() => handleManualPaginate(1)}>
         {">"}
       </div>
     </div>

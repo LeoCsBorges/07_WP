@@ -63,3 +63,55 @@
 .slideDescription p {
   margin-block: 0.5rem;
 }
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .sliderWrapper {
+    gap: 3rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.25rem;
+    padding: 6px 10px;
+  }
+
+  .slideDescription {
+    font-size: 0.875rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .sliderWrapper {
+    gap: 1.5rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.25rem;
+    padding: 6px 10px;
+  }
+
+  .slideDescription {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  .sliderWrapper {
+    gap: 0.5rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1rem;
+    padding: 3px 5px;
+  }
+
+  .slideDescription {
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+}

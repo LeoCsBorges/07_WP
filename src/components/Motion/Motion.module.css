@@ -12,10 +12,6 @@
   margin-bottom: 5rem;
 }
 
-.videosWrapper {
-  /* border: 2px solid blue; */
-}
-
 .videosWrapper iframe {
   width: 50%;
   aspect-ratio: 16 / 9;
@@ -25,4 +21,40 @@
 
 .videosWrapper iframe:hover {
   filter: saturate(1);
+}
+
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .wrapper {
+    padding-top: 5rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-top: 4.5rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 4rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .videosWrapper iframe {
+    width: 100%;
+  }
 }

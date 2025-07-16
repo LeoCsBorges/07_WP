@@ -25,3 +25,44 @@
   column-gap: 160px;
   row-gap: 100px;
 }
+
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .wrapper {
+    padding: 5rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 4.5rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 4rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  /* Stack completo, fontes menores, botões maiores */
+}

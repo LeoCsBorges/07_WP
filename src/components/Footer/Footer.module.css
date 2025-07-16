@@ -1,11 +1,12 @@
 .footerContainer {
-  padding-block: 160px;
-  padding-inline: 80px;
+  padding-block: 10rem;
+  padding-inline: 5rem;
   color: var(--color-white);
   background-color: var(--color-black);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 900;
@@ -24,4 +25,47 @@
   padding: 1rem;
   color: #575757;
   background-color: var(--color-gray-dark);
+}
+
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .footerContainer {
+    padding-block: 8rem;
+    padding-inline: 4rem;
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .footerContainer {
+    padding-block: 5rem;
+    padding-inline: 2rem;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .subfooter {
+    font-size: 1rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  .footerContainer {
+    font-size: 1rem;
+  }
+
+  .subfooter {
+    font-size: 0.75rem;
+  }
 }

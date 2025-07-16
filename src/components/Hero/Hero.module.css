@@ -58,7 +58,7 @@
 .card04__options {
   width: 50%;
   height: 100%;
-  padding: 98px;
+  padding: 6.125rem;
   display: flex;
   align-items: center;
 }
@@ -71,9 +71,6 @@
 .card04__portifolio {
   width: 50%;
   height: 100%;
-}
-
-.card04__portifolio {
   background: url("../../assets/images/bg-programador02.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -92,4 +89,157 @@
 
 .card__link:hover {
   background-color: rgba(37, 37, 37, 0.5);
+}
+
+/* Extra Large (Monitores 1440px+) */
+@media (max-width: 1440px) {
+  .title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .description {
+    font-size: 1.15rem;
+  }
+
+  .card {
+    padding: 4rem;
+  }
+
+  .card01 {
+    font-size: 1.75rem;
+  }
+
+  .card04 {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .card04__options {
+    padding-left: 4rem;
+  }
+}
+
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .title {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 3rem;
+  }
+
+  .card04 {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .card04__options {
+    padding-left: 3rem;
+  }
+
+  .card04__options__list {
+    line-height: 1.75rem;
+  }
+
+  .card__link {
+    padding: 20px 30px;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.05rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .card01 {
+    font-size: 1.25rem;
+  }
+
+  .card04 {
+    padding: 0;
+    font-size: 0.875rem;
+  }
+
+  .card04__options {
+    width: 45%;
+    padding-left: 2rem;
+  }
+
+  .card04__portifolio {
+    width: 55%;
+  }
+
+  .card04__options__list {
+    line-height: 1.5rem;
+  }
+
+  .card__link {
+    padding: 16px 28px;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    min-height: 336px;
+  }
+
+  .card04 {
+    font-size: 1rem;
+  }
+  .card04__options {
+    width: 50%;
+    padding-left: 3rem;
+  }
+
+  .card04__portifolio {
+    width: 50%;
+  }
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  .card04 {
+    flex-direction: column;
+  }
+
+  .card04__options {
+    width: 100%;
+    padding-block: 2rem;
+    padding-left: 5rem;
+  }
+
+  .card04__options__list {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .card04__options__list li {
+    margin-bottom: 1rem;
+  }
+
+  .card04__portifolio {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .card__link {
+    padding: 1.75rem 3rem;
+  }
 }

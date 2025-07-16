@@ -29,3 +29,49 @@
   color: var(--color-gray-dark);
   background-color: var(--color-white);
 }
+
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .wrapper {
+    padding: 5rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 4.5rem 2rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,20 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .list {
+    gap: 1.25rem;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .list {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,88 @@
+.trigger {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  z-index: 999;
+}
+
+.content {
+  padding-block: 1rem;
+  padding-left: 0.25rem;
+  padding-right: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100svw;
+  max-width: 340px;
+  height: 100svh;
+  color: var(--color-gray-dark);
+  background-color: var(--color-gray-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1000;
+}
+
+.content[data-state="open"] {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.content[data-state="closed"] {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menuNav a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.menuNav a:hover {
+  text-decoration: underline;
+}
+
+.close {
+  color: inherit;
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}

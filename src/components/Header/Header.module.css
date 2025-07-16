@@ -1,12 +1,14 @@
 .wrapper {
-  background-color: var(--color-gray-light);
-  padding-block: 36px;
+  max-width: 1940px;
+  margin: 0 auto;
+  padding: 2.25rem 6.125rem;
   font-size: 1.5rem;
   font-weight: 700;
-  padding-inline: 98px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+  /* position: relative; */
 }
 
 .header__img {
@@ -14,7 +16,39 @@
   height: auto;
 }
 
-.header__nav__list {
-  display: flex;
-  gap: 2rem;
+/* Large (Desktops padrão) */
+@media (max-width: 1280px) {
+  .wrapper {
+    font-size: 1.25rem;
+    padding-inline: 4rem;
+  }
+
+  .header__img {
+    width: 224px;
+  }
+}
+
+/* Medium (Tablets paisagem) */
+@media (max-width: 1024px) {
+  .wrapper {
+    font-size: 1.15rem;
+    padding-inline: 2rem;
+  }
+
+  .header__img {
+    width: 180px;
+  }
+}
+
+/* Small (Tablets retrato ou smartphones grandes) */
+@media (max-width: 768px) {
+  .wrapper {
+    font-size: 1.15rem;
+    padding-inline: 1rem;
+  }
+}
+
+/* Extra Small (Smartphones menores) */
+@media (max-width: 480px) {
+  /* Stack completo, fontes menores, botões maiores */
 }

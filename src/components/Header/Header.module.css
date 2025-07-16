@@ -50,5 +50,7 @@
 
 /* Extra Small (Smartphones menores) */
 @media (max-width: 480px) {
-  /* Stack completo, fontes menores, botões maiores */
+  .wrapper {
+    padding-block: 1.5rem;
+  }
 }

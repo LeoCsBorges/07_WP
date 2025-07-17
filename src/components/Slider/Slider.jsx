@@ -101,6 +101,7 @@ export const Slider = () => {
                 if (info.offset.x < -50) paginate(1);
                 else if (info.offset.x > 50) paginate(-1);
               }}
+              dragTransition={{ power: 0.1, timeConstant: 200 }}
             >
               <div className={styles.slideImg}>
                 <a href={link} target="_blank" rel="noopener noreferrer">

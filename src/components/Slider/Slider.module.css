@@ -32,6 +32,7 @@
   will-change: transform, opacity;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
+  border: 1px solid red;
 }
 
 .slideImg {

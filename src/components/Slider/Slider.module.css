@@ -20,6 +20,7 @@
 .sliderContent {
   max-width: 1250px;
   height: auto;
+  min-height: 233px;
   position: relative;
   flex-grow: 1;
   overflow: hidden;
@@ -32,7 +33,7 @@
   will-change: transform, opacity;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
-  border: 1px solid red;
+  border: 1px solid green;
 }
 
 .slideImg {

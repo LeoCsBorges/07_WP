@@ -65,48 +65,62 @@ export const Slider = () => {
   };
 
   return (
-    <div className={styles.sliderWrapper}>
-      <div className={styles.prev} onClick={() => paginate(-1)}>
-        {"<"}
+    <>
+      <div className={styles.pagination}>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setSlideState([index, index > slideIndex ? 1 : -1])}
+            className={`${styles.dot} ${
+              index === slideIndex ? styles.active : ""
+            }`}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
       </div>
+      <div className={styles.sliderWrapper}>
+        <div className={styles.prev} onClick={() => paginate(-1)}>
+          {"<"}
+        </div>
 
-      <div className={styles.sliderContent}>
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={`${slideIndex}-${direction}`}
-            className={styles.slide}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.2}
-            onDragEnd={(e, info) => {
-              if (info.offset.x < -50) paginate(1);
-              else if (info.offset.x > 50) paginate(-1);
-            }}
-          >
-            <div className={styles.slideImg}>
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <img src={img} alt={alt} />
-              </a>
-            </div>
-            <div className={styles.slideDescription}>
-              {description.map((text, idx) => (
-                <p key={idx}>{text}</p>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+        <div className={styles.sliderContent}>
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={`${slideIndex}-${direction}`}
+              className={styles.slide}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(e, info) => {
+                if (info.offset.x < -50) paginate(1);
+                else if (info.offset.x > 50) paginate(-1);
+              }}
+            >
+              <div className={styles.slideImg}>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img src={img} alt={alt} />
+                </a>
+              </div>
+              <div className={styles.slideDescription}>
+                {description.map((text, idx) => (
+                  <p key={idx}>{text}</p>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-      <div className={styles.next} onClick={() => paginate(1)}>
-        {">"}
+        <div className={styles.next} onClick={() => paginate(1)}>
+          {">"}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

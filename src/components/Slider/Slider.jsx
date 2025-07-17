@@ -51,9 +51,9 @@ export const Slider = () => {
   const { img, alt, link, description } = slides[slideIndex];
 
   const variants = {
-    enter: (dir) => ({ x: dir > 0 ? 150 : -150, opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir) => ({ x: dir > 0 ? -150 : 150, opacity: 0 }),
+    enter: (dir) => ({ x: dir > 0 ? "100%" : "-100%", scale: 0.98 }),
+    center: { x: 0, scale: 1 },
+    exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%", scale: 0.98 }),
   };
 
   const paginate = (newDirection) => {

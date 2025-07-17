@@ -19,6 +19,7 @@
 
 .sliderContent {
   max-width: 1250px;
+  height: auto;
   position: relative;
   flex-grow: 1;
   overflow: hidden;
@@ -57,7 +58,7 @@
 }
 
 .slideDescription {
-  padding: 1rem;
+  height: 5rem;
 }
 
 .slideDescription p {
@@ -94,6 +95,7 @@
   }
 
   .slideDescription {
+    height: 4rem;
     font-size: 0.7rem;
   }
 }
@@ -111,6 +113,7 @@
   }
 
   .slideDescription {
+    height: 3rem;
     font-size: 0.5rem;
     font-weight: 500;
   }

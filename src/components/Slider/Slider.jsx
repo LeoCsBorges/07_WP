@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Slider.module.css";
 
@@ -48,8 +48,6 @@ const slides = [
 
 export const Slider = () => {
   const [[slideIndex, direction], setSlideState] = useState([0, 0]);
-  const [autoplay, setAutoplay] = useState(true);
-  const intervalRef = useRef();
   const { img, alt, link, description } = slides[slideIndex];
 
   const variants = {
@@ -57,13 +55,6 @@ export const Slider = () => {
     center: { x: 0, opacity: 1 },
     exit: (dir) => ({ x: dir > 0 ? -150 : 150, opacity: 0 }),
   };
-
-  useEffect(() => {
-    if (autoplay) {
-      intervalRef.current = setInterval(() => paginate(1), 5000);
-    }
-    return () => clearInterval(intervalRef.current);
-  }, [autoplay]);
 
   const paginate = (newDirection) => {
     setSlideState(([prevIndex]) => {
@@ -73,16 +64,9 @@ export const Slider = () => {
     });
   };
 
-  const handleManualPaginate = (dir) => {
-    clearInterval(intervalRef.current);
-    setAutoplay(false);
-    paginate(dir);
-    setTimeout(() => setAutoplay(true), 8000);
-  };
-
   return (
     <div className={styles.sliderWrapper}>
-      <div className={styles.prev} onClick={() => handleManualPaginate(-1)}>
+      <div className={styles.prev} onClick={() => paginate(-1)}>
         {"<"}
       </div>
 
@@ -119,7 +103,7 @@ export const Slider = () => {
         </AnimatePresence>
       </div>
 
-      <div className={styles.next} onClick={() => handleManualPaginate(1)}>
+      <div className={styles.next} onClick={() => paginate(1)}>
         {">"}
       </div>
     </div>

@@ -1,5 +1,10 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import styles from "./Slider.module.css";
 
 import MinSaude from "../../assets/images/min-saude.jpg";
@@ -47,81 +52,46 @@ const slides = [
 ];
 
 export const Slider = () => {
-  const [[slideIndex, direction], setSlideState] = useState([0, 0]);
-  const { img, alt, link, description } = slides[slideIndex];
-
-  const variants = {
-    enter: (dir) => ({ x: dir > 0 ? "100%" : "-100%", scale: 0.98 }),
-    center: { x: 0, scale: 1 },
-    exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%", scale: 0.98 }),
-  };
-
-  const paginate = (newDirection) => {
-    setSlideState(([prevIndex]) => {
-      const newIndex =
-        (prevIndex + newDirection + slides.length) % slides.length;
-      return [newIndex, newDirection];
-    });
-  };
-
   return (
-    <>
-      <div className={styles.pagination}>
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setSlideState([index, index > slideIndex ? 1 : -1])}
-            className={`${styles.dot} ${
-              index === slideIndex ? styles.active : ""
-            }`}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
-      <div className={styles.sliderWrapper}>
-        <div className={styles.prev} onClick={() => paginate(-1)}>
-          {"<"}
-        </div>
-
-        <div className={styles.sliderContent}>
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={`${slideIndex}-${direction}`}
-              className={styles.slide}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={(e, info) => {
-                if (info.offset.x < -50) paginate(1);
-                else if (info.offset.x > 50) paginate(-1);
-              }}
-              dragTransition={{ power: 0.1, timeConstant: 200 }}
-            >
+    <div className={styles.sliderWrapper}>
+      <div className={styles.prev}>{"<"}</div>
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation={{
+          nextEl: `.${styles.next}`,
+          prevEl: `.${styles.prev}`,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        spaceBetween={30}
+        slidesPerView={1}
+        className={styles.swiperContainer}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className={styles.slide}>
               <div className={styles.slideImg}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  <img src={img} alt={alt} />
+                <a href={slide.link} target="_blank" rel="noopener noreferrer">
+                  <img src={slide.img} alt={slide.alt} />
                 </a>
               </div>
               <div className={styles.slideDescription}>
-                {description.map((text, idx) => (
+                {slide.description.map((text, idx) => (
                   <p key={idx}>{text}</p>
                 ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        <div className={styles.next} onClick={() => paginate(1)}>
-          {">"}
-        </div>
-      </div>
-    </>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className={styles.next}>{">"}</div>
+    </div>
   );
 };
 

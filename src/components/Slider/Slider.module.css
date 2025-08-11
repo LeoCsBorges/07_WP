@@ -17,15 +17,6 @@
   background-color: var(--color-white);
 }
 
-.sliderContent {
-  max-width: 1250px;
-  width: 100%;
-  overflow: hidden;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .slide {
   width: 100%;
   display: flex;
@@ -61,10 +52,37 @@
 
 .slideDescription {
   height: 5rem;
+  margin-bottom: 1.25rem;
 }
 
 .slideDescription p {
   margin-block: 0.5rem;
+}
+
+/* Botões de paginação globais do Swiper */
+:global(.swiper-pagination) {
+  display: none;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+:global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: var(--color-white);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+:global(.swiper-pagination-bullet:hover) {
+  opacity: 0.7;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* Medium (Tablets paisagem) */
@@ -82,33 +100,6 @@
   .slideDescription {
     font-size: 0.875rem;
   }
-}
-
-.pagination {
-  display: none;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  background-color: var(--color-white);
-  opacity: 0.4;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dot:hover {
-  opacity: 0.7;
-}
-
-.dot.active {
-  opacity: 1;
-  transform: scale(1.1);
 }
 
 /* Small (Tablets retrato ou smartphones grandes) */
@@ -146,7 +137,8 @@
     font-weight: 500;
   }
 
-  .pagination {
+  /* Exibe a paginação somente no mobile */
+  :global(.swiper-pagination) {
     display: flex;
   }
 }

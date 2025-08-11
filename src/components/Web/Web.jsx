@@ -3,7 +3,7 @@ import Slider from "../Slider";
 
 export const Web = () => {
   return (
-    <section>
+    <section id="web">
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>

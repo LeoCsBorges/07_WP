@@ -27,7 +27,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* card bottom left */}
-          <div className={`${styles.card} ${styles.card03}`}>
+          <div id="servicos" className={`${styles.card} ${styles.card03}`}>
             <div>
               <h2 className={styles.title}>Serviços</h2>
               <p className={styles.description}>

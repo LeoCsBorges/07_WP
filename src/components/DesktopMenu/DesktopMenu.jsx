@@ -1,26 +1,25 @@
 import styles from "./DesktopMenu.module.css";
-import { Link } from "react-router-dom";
 
 export const DesktopMenu = () => {
   return (
     <ul className={styles.list}>
       <li>
-        <Link to="/">Principal</Link>
+        <a href="/">Principal</a>
       </li>
       <li>
-        <Link to="/servicos">Serviços</Link>
+        <a href="#servicos">Serviços</a>
       </li>
       <li>
-        <Link to="/banners">Banners</Link>
+        <a href="#banners">Banners</a>
       </li>
       <li>
-        <Link to="/web">Web</Link>
+        <a href="#web">Web</a>
       </li>
       <li>
-        <Link to="/motion">Motion</Link>
+        <a href="#motion">Motion</a>
       </li>
       <li>
-        <Link to="/contato">Contato</Link>
+        <a href="#footer">Contato</a>
       </li>
     </ul>
   );

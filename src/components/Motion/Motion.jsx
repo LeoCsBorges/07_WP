@@ -2,7 +2,7 @@ import styles from "./Motion.module.css";
 
 export const Motion = () => {
   return (
-    <section>
+    <section id="motion">
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Motion Design</h2>

@@ -8,7 +8,7 @@ import LogoTURISMO from "../../assets/images/logo-minturismo.png";
 
 export const Clients = () => {
   return (
-    <section>
+    <section id="clientes">
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Clientes</h2>

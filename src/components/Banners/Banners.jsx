@@ -68,7 +68,7 @@ export const Banners = () => {
   ];
 
   return (
-    <section>
+    <section id="banners">
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>

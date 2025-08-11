@@ -3,7 +3,7 @@ import FooterLogo from "../FooterLogo/FooterLogo";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       <div className="container">
         <div className={styles.footerContainer}>
           {/* logo animada */}

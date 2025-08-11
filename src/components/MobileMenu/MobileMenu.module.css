@@ -69,6 +69,7 @@
 }
 
 .menuNav button {
+  color: inherit;
   background-color: inherit;
   text-decoration: none;
   font-size: 1.4rem;

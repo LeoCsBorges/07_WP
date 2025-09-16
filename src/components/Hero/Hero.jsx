@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
@@ -56,9 +55,9 @@ export const Hero = () => {
               </ul>
             </div>
             <div className={styles.card04__portifolio}>
-              <Link to="/portifolio" className={styles.card__link}>
+              <a href="#" className={styles.card__link}>
                 VER PORTIFÓLIO
-              </Link>
+              </a>
             </div>
           </div>
         </div>
